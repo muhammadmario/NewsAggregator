@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  width: 480px;
+  height: 1020px;
+  background-color: antiquewhite;
+  margin: auto;
+}
