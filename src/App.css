@@ -1,11 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .App {
-  width: 480px;
-  height: 1020px;
-  background-color: antiquewhite;
+  max-width: 480px;
+  min-height: 1020px;
+  background-color: white;
   margin: auto;
 }
