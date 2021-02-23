@@ -1,0 +1,28 @@
+.link {
+  width: 160px;
+  height: 190px;
+  position: relative;
+  flex: 0 0 auto;
+  margin-right: 3px;
+}
+
+.link .title {
+  width: 160px;
+  height: 190px;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.link .title .wrap {
+  background-color: black;
+  padding: 0px 5px;
+}
+
+.link .title .wrap h4 {
+  color: white;
+  font-weight: 400;
+}
