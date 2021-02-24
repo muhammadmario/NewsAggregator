@@ -1,14 +1,11 @@
 import React from "react";
-import NewsCard from "./NewsCard";
-import "./NewsList.css";
-import Loading from "./Loading";
+import NewsCard from "../Component/NewsCard";
+import Loading from "../Component/Loading";
 import request from "../Helper/request";
 import useFetch from "../Helper/useFetch";
 
-function NewsList() {
-  // const [news, loading] = useContext(NewsContext);
-
-  const { news, loading } = useFetch(request.fetchDefault);
+function Tesla() {
+  const { news, loading } = useFetch(request.fetchTesla);
 
   return (
     <div className="news-list">
@@ -29,4 +26,4 @@ function NewsList() {
   );
 }
 
-export default NewsList;
+export default Tesla;

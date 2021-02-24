@@ -4,7 +4,7 @@ import loadingGif from "../Image/loading.gif";
 function Loading() {
   return (
     <div className="loading">
-      <img src={loadingGif} alt="loading.." />
+      <img src={loadingGif} alt="loading..." />
     </div>
   );
 }

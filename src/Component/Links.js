@@ -1,7 +1,7 @@
 import React from "react";
 import "./Link.css";
 
-function Link({ image, title }) {
+function Links({ image, title }) {
   return (
     <div className="link">
       <img src={image} alt="background" />
@@ -14,4 +14,4 @@ function Link({ image, title }) {
   );
 }
 
-export default Link;
+export default Links;
