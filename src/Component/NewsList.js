@@ -4,6 +4,7 @@ import "./NewsList.css";
 // import request from "../Helper/request";
 // import axios from "axios";
 import { NewsContext } from "../Helper/NewsContext";
+import Loading from "./Loading";
 
 function NewsList() {
   //   const baseURL = "https://newsapi.org/v2/everything?q=";
@@ -26,7 +27,7 @@ function NewsList() {
 
   return (
     <div className="news-list">
-      {loading && <div>loading..</div>}
+      {loading && <Loading />}
       {news &&
         news.map((data) => (
           <NewsCard
