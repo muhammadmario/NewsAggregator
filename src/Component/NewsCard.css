@@ -1,0 +1,62 @@
+.news-card {
+  display: flex;
+  width: 95%;
+  height: 190px;
+  box-shadow: -1px 4px 37px -4px rgba(0, 0, 0, 0.44);
+  -webkit-box-shadow: -1px 4px 37px -4px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: -1px 4px 37px -4px rgba(0, 0, 0, 0.44);
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.news-card .image img {
+  border-radius: 20px 0px 0px 20px;
+}
+
+.news-card .info-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2px;
+}
+
+.news-card .info-wrap .info {
+  font-size: 12px;
+}
+
+.news-card .info-wrap .info h1 {
+  font-size: 16px;
+}
+
+.news-card .info-wrap .info p {
+  font-size: 11px;
+}
+
+.news-card .info-wrap .info .links {
+  display: flex;
+}
+.news-card .info-wrap .info .links a {
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.news-card .info-wrap .info .desk {
+  color: rgb(195, 199, 199);
+}
+
+.news-card .info-wrap .info .goto {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.news-card .info-wrap .goto {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.news-card .info-wrap .goto a {
+  text-decoration: none;
+  font-size: 11px;
+}
