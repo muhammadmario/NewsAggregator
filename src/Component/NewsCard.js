@@ -9,9 +9,10 @@ function NewsCard({
   description,
   publishedAt,
   url,
+  key,
 }) {
   return (
-    <div className="news-card">
+    <div className="news-card" key={key}>
       <div className="image">
         <img src={image} alt="logo" />
       </div>

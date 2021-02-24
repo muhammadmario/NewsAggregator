@@ -4,3 +4,11 @@
   align-items: center;
   flex-direction: column;
 }
+
+.news-list button {
+  margin: 10px 0px 10px 0px;
+  padding: 5px 10px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+}

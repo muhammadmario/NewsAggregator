@@ -5,16 +5,15 @@ import request from "../Helper/request";
 import useFetch from "../Helper/useFetch";
 
 function Bitcoin() {
-  // const [news, loading] = useContext(NewsContext);
-
-  const { news, loading } = useFetch(request.fetchBitcoin);
+  const { news, loading, setPage } = useFetch(request.fetchBitcoin);
 
   return (
     <div className="news-list">
       {loading && <Loading />}
       {news &&
-        news.map((data) => (
+        news.articles.map((data, index) => (
           <NewsCard
+            key={index}
             title={data.title}
             source={data.source.name}
             description={data.description}
@@ -24,6 +23,11 @@ function Bitcoin() {
             url={data.url}
           />
         ))}
+      {news.articles.length < parseInt(news.totalResults) ? (
+        <button disabled={loading} onClick={() => setPage((c) => c + 1)}>
+          Loadmore
+        </button>
+      ) : null}
     </div>
   );
 }

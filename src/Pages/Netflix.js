@@ -5,14 +5,15 @@ import request from "../Helper/request";
 import useFetch from "../Helper/useFetch";
 
 function Netflix() {
-  const { news, loading } = useFetch(request.fetchNetflix);
+  const { news, loading, setPage } = useFetch(request.fetchNetflix);
 
   return (
     <div className="news-list">
       {loading && <Loading />}
       {news &&
-        news.map((data) => (
+        news.articles.map((data, index) => (
           <NewsCard
+            key={index}
             title={data.title}
             source={data.source.name}
             description={data.description}
@@ -22,6 +23,11 @@ function Netflix() {
             url={data.url}
           />
         ))}
+      {news.articles.length < parseInt(news.totalResults) ? (
+        <button disabled={loading} onClick={() => setPage((c) => c + 1)}>
+          Loadmore
+        </button>
+      ) : null}
     </div>
   );
 }
