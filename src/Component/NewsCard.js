@@ -1,7 +1,15 @@
 import React from "react";
 import "./NewsCard.css";
 
-function NewsCard({ image }) {
+function NewsCard({
+  author,
+  image,
+  title,
+  source,
+  description,
+  publishedAt,
+  url,
+}) {
   return (
     <div className="news-card">
       <div className="image">
@@ -9,21 +17,18 @@ function NewsCard({ image }) {
       </div>
       <div className="info-wrap">
         <div className="info">
-          <h1>Title</h1>
-          <p>12-02-2021</p>
+          <h1>{title}</h1>
+          <p>{publishedAt}</p>
           <div className="links">
-            <a href="">https://google.com</a>
-            <p> || BBC News</p>
+            <a href={author}>{author}</a>
+            <p> || {source}</p>
           </div>
           <div className="desk">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
-              rerum.
-            </p>
+            <p>{description}</p>
           </div>
         </div>
         <div className="goto">
-          <a href="">Go to Website</a>
+          <a href={url}>Go to Website</a>
         </div>
       </div>
     </div>

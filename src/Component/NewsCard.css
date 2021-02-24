@@ -1,23 +1,34 @@
 .news-card {
   display: flex;
   width: 95%;
-  height: 190px;
+  min-height: 190px;
   box-shadow: -1px 4px 37px -4px rgba(0, 0, 0, 0.44);
   -webkit-box-shadow: -1px 4px 37px -4px rgba(0, 0, 0, 0.44);
   -moz-box-shadow: -1px 4px 37px -4px rgba(0, 0, 0, 0.44);
   border-radius: 20px;
   margin-top: 10px;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.news-card .image {
+  width: 100%;
+  height: 100%;
 }
 
 .news-card .image img {
-  border-radius: 20px 0px 0px 20px;
+  border-radius: 20px 20px 20px 20px;
+  width: 100%;
+  height: 100%;
 }
 
 .news-card .info-wrap {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 2px;
+  padding: 5px;
 }
 
 .news-card .info-wrap .info {
@@ -38,6 +49,7 @@
 .news-card .info-wrap .info .links a {
   font-size: 10px;
   text-decoration: none;
+  color: black;
 }
 
 .news-card .info-wrap .info .desk {
@@ -59,4 +71,5 @@
 .news-card .info-wrap .goto a {
   text-decoration: none;
   font-size: 11px;
+  color: blue;
 }
