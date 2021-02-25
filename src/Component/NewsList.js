@@ -6,10 +6,11 @@ import request from "../Helper/request";
 import useFetch from "../Helper/useFetch";
 
 function NewsList() {
-  const { news, loading, setPage } = useFetch(request.fetchDefault);
+  const { news, loading, setPage, error } = useFetch(request.fetchDefault);
 
   return (
     <div className="news-list">
+      {error && <div>upps.. ada gangguan</div>}
       {loading && <Loading />}
       {news &&
         news.articles.map((data, index) => (

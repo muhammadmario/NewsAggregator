@@ -5,10 +5,11 @@ import request from "../Helper/request";
 import useFetch from "../Helper/useFetch";
 
 function Apple() {
-  const { news, loading, setPage } = useFetch(request.fetchApple);
+  const { news, loading, setPage, error } = useFetch(request.fetchApple);
 
   return (
     <div className="news-list">
+      {error && <div>upps.. ada gangguan</div>}
       {loading && <Loading />}
       {news &&
         news.articles.map((data, index) => (

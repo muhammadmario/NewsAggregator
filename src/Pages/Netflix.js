@@ -5,10 +5,11 @@ import request from "../Helper/request";
 import useFetch from "../Helper/useFetch";
 
 function Netflix() {
-  const { news, loading, setPage } = useFetch(request.fetchNetflix);
+  const { news, loading, setPage, error } = useFetch(request.fetchNetflix);
 
   return (
     <div className="news-list">
+      {error && <div>upps.. ada gangguan</div>}
       {loading && <Loading />}
       {news &&
         news.articles.map((data, index) => (

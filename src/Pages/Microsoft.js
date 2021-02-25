@@ -5,10 +5,11 @@ import request from "../Helper/request";
 import useFetch from "../Helper/useFetch";
 
 function Microsoft() {
-  const { news, loading, setPage } = useFetch(request.fetchMicrosoft);
+  const { news, loading, setPage, error } = useFetch(request.fetchMicrosoft);
 
   return (
     <div className="news-list">
+      {error && <div>upps.. ada gangguan</div>}
       {loading && <Loading />}
       {news &&
         news.articles.map((data, index) => (

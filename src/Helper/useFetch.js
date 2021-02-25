@@ -40,7 +40,6 @@ const useFetch = (url) => {
             status: result.status,
           };
         });
-
         if (result.status !== "ok") {
           throw new Error("error");
         }
@@ -51,7 +50,7 @@ const useFetch = (url) => {
     };
     fetchData();
   }, [page, url]);
-  return { loading, news, page, setPage };
+  return { loading, news, page, setPage, error };
 };
 
 export default useFetch;

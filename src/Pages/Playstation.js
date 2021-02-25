@@ -5,10 +5,11 @@ import request from "../Helper/request";
 import useFetch from "../Helper/useFetch";
 
 function Playstation() {
-  const { news, loading, setPage } = useFetch(request.fetchPlaystation);
+  const { news, loading, setPage, error } = useFetch(request.fetchPlaystation);
 
   return (
     <div className="news-list">
+      {error && <div>upps.. ada gangguan</div>}
       {loading && <Loading />}
       {news &&
         news.articles.map((data, index) => (

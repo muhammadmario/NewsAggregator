@@ -5,10 +5,11 @@ import request from "../Helper/request";
 import useFetch from "../Helper/useFetch";
 
 function Google() {
-  const { news, loading, setPage } = useFetch(request.fetchGoogle);
+  const { news, loading, setPage, error } = useFetch(request.fetchGoogle);
 
   return (
     <div className="news-list">
+      {error && <div>upps.. ada gangguan</div>}
       {loading && <Loading />}
       {news &&
         news.articles.map((data, index) => (

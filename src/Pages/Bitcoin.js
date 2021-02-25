@@ -5,10 +5,11 @@ import request from "../Helper/request";
 import useFetch from "../Helper/useFetch";
 
 function Bitcoin() {
-  const { news, loading, setPage } = useFetch(request.fetchBitcoin);
+  const { news, loading, setPage, error } = useFetch(request.fetchBitcoin);
 
   return (
     <div className="news-list">
+      {error && <div>upps.. ada gangguan</div>}
       {loading && <Loading />}
       {news &&
         news.articles.map((data, index) => (
