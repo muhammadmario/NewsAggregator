@@ -7,8 +7,12 @@
 
 .news-list button {
   margin: 10px 0px 10px 0px;
-  padding: 5px 10px;
-  background-color: white;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
   border: none;
   border-radius: 20px;
+  box-shadow: -1px 4px 37px -4px rgba(0, 0, 0, 0.44);
+  -webkit-box-shadow: -1px 4px 37px -4px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: -1px 4px 37px -4px rgba(0, 0, 0, 0.44);
 }
