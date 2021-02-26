@@ -9,7 +9,6 @@ function Apple() {
 
   return (
     <div className="news-list">
-      {error && <div>upps.. ada gangguan</div>}
       {loading && <Loading />}
       {news &&
         news.articles.map((data, index) => (
@@ -29,6 +28,7 @@ function Apple() {
           Loadmore
         </button>
       ) : null}
+      {error && <div>upps.. ada gangguan</div>}
     </div>
   );
 }

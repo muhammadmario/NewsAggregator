@@ -10,7 +10,6 @@ function NewsList() {
 
   return (
     <div className="news-list">
-      {error && <div>upps.. ada gangguan</div>}
       {loading && <Loading />}
       {news &&
         news.articles.map((data, index) => (
@@ -30,6 +29,7 @@ function NewsList() {
           Loadmore
         </button>
       ) : null}
+      {error && <div>upps.. ada gangguan</div>}
     </div>
   );
 }

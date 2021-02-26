@@ -9,7 +9,6 @@ function Bitcoin() {
 
   return (
     <div className="news-list">
-      {error && <div>upps.. ada gangguan</div>}
       {loading && <Loading />}
       {news &&
         news.articles.map((data, index) => (
@@ -29,6 +28,7 @@ function Bitcoin() {
           Loadmore
         </button>
       ) : null}
+      {error && <div>upps.. ada gangguan</div>}
     </div>
   );
 }
